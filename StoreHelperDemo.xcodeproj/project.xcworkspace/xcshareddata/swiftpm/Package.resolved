@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "StoreHelper",
+        "repositoryURL": "https://github.com/russell-archer/StoreHelper.git",
+        "state": {
+          "branch": "main",
+          "revision": "55a66bff8991a2d5420b5ce39c71417d56cfcf57",
+          "version": null
+        }
+      },
+      {
+        "package": "swift-collections",
+        "repositoryURL": "https://github.com/apple/swift-collections",
+        "state": {
+          "branch": null,
+          "revision": "48254824bb4248676bf7ce56014ff57b142b77eb",
+          "version": "1.0.2"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
