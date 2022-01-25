@@ -41,7 +41,7 @@ The following steps show to use `StoreHelper` to create a bare-bones SwiftUI dem
 
 ![](./readme-assets/StoreHelperDemo103.png)
 
-- Notice that the `StoreHelper` and `swift-collections` (which is a dependency for `StoreHelper`) packages have been added to the project
+- Notice that the `StoreHelper` and `swift-collections` packages have been added to the project. `swift-collections` is a package dependency for `StoreHelper`
 - If you expand the `StoreHelper` package you'll be able to see the source:
 
 ![](./readme-assets/StoreHelperDemo104.png)
@@ -60,8 +60,7 @@ The following steps show to use `StoreHelper` to create a bare-bones SwiftUI dem
 > Alternatively, you can copy everything required for the **StoreHelperDemo** app from the **StoreHelper > Samples** folder:
 > - Copy all files in **StoreHelper > Samples > Code** into your project's **Shared** folder
 > - Copy all files in **StoreHelper > Samples > Configuration** into your project's **Shared** folder
-> - Copy all files in **StoreHelper > Samples > Code** into your project's **Shared** folder
-> - Add all the images in **StoreHelper > Samples > Images** into your project's **Asset Catalog** folder
+> - Add all the images in **StoreHelper > Samples > Images** to your project's **Asset Catalog** folder
 
 ```swift
 import SwiftUI
@@ -113,7 +112,8 @@ struct MainView: View {
 }
 ```
 
-- `MainView` provides simple navigation to the product list view, and a new `ProductView` which will allow the user access to a particular product if they've purchased it. Notice how we pass the `ProductId` for either the Large Flowers or Small Flowers product to `ProductView`
+- `MainView` provides simple navigation to `ContentView`, which shows a list of available products, and `ProductView` which gives the user access to a particular product if they've purchased it
+- Notice how we pass the `ProductId` for either the "Large Flowers" or "Small Flowers" product to `ProductView`
 - Create a new SwiftUI `View` named `ProductView` and save it to the **Shared** folder. Replace the existing code with the following:
 
 ```swift
@@ -177,7 +177,7 @@ struct ContentView: View {
 }
 ```
 
-- The above creates the `StoreHelper Products` view. This view will display a list of your configured products (we haven't configured them yet) and allow the user to purchase them and see detailed information about purchases
+- The above creates the `StoreHelper Products` view. This view displays a list of your configured products (we haven't configured them yet), allow the user to purchase products and see detailed information about purchases
 - If the user taps on a product's **More Info** button, the `Purchases` view provides the unique `ProductId` of that product to our app via a closure. We can then display a view or (as in this example) sheet showing details of the product, and why the user might want to purchase it
 - We hand-off the presentation of our product information details to the (as yet undefined) `ProductInfo` view
 - Create a new SwiftUI view in the **Shared** folder named `ProductInfo.swift`. Replace the existing code with the following:
@@ -245,7 +245,7 @@ struct ProductInfoDefault: View {
 ```
 
 - `ProductInfo` uses `StoreHelper.product(from:)` to retrieve a `StoreKit2 Product` struct, which gives localized information about the product
-- From the **StoreHelper > Samples > Images** folder, drag all the images into the project's **Asset Catalog**. These images have filenames that are the same as the product ids which they represent
+- From the **StoreHelper > Samples > Images** folder, drag all the images into the project's **Asset Catalog**. These images have filenames that are the same as the product ids for the products which they represent
 - From the **StoreHelper > Samples > Configuration** folder, drag the `Products.storekit` and `Products.plist` files into the **Shared** project folder. These are example product configuration files
 - Select the **iOS target** and select **Product > Scheme> Edit Scheme**. Select the `Products.storekit` file in the **StoreKit Configuration** field:
 
@@ -253,8 +253,9 @@ struct ProductInfoDefault: View {
 
 - Repeat the previous step for the **macOS target**
 - Select the **iOS target** and run it in the simulator:
-	- The **Product List** will display a list of products, along with images and descriptions
-	- Try purchasing the Large Flowers product
+    - The MainView provides navigation to the **Products List** and product access views
+	- The **Products List** view displays a list of products, along with images and descriptions
+	- Try purchasing the **Large Flowers** product
 	- Your demo app supports a complete range of in-app purchase-related features. See the documentation for `StoreHelper` for a full list of features
 	- Try selecting "Large Flowers" from the main view. If you've purchased it you should see that you have access, otherwise you'll see a "no access" error 
 
