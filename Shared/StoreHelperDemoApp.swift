@@ -19,7 +19,7 @@ struct StoreHelperDemoApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView().environmentObject(storeHelper)
+            MainView().environmentObject(storeHelper)
                 #if os(macOS)
                 .frame(minWidth: minScreenSize.width, idealWidth: defaultScreenSize.width, minHeight: minScreenSize.height, idealHeight: defaultScreenSize.height)
                 .font(.title2)  // Default font

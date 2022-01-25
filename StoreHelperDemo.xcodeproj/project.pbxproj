@@ -23,6 +23,10 @@
 		686DA14F279F6EF700576175 /* Products.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 686DA14B279F6EF700576175 /* Products.storekit */; };
 		686DA151279F6F7900576175 /* ProductInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686DA150279F6F7900576175 /* ProductInfo.swift */; };
 		686DA152279F6F7900576175 /* ProductInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686DA150279F6F7900576175 /* ProductInfo.swift */; };
+		6885967B27A02F9600251729 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6885967A27A02F9600251729 /* MainView.swift */; };
+		6885967C27A02F9600251729 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6885967A27A02F9600251729 /* MainView.swift */; };
+		6885967E27A0321C00251729 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6885967D27A0321C00251729 /* ProductView.swift */; };
+		6885967F27A0321C00251729 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6885967D27A0321C00251729 /* ProductView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +42,8 @@
 		686DA14B279F6EF700576175 /* Products.storekit */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Products.storekit; sourceTree = "<group>"; };
 		686DA150279F6F7900576175 /* ProductInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductInfo.swift; sourceTree = "<group>"; };
 		686DA153279F724000576175 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		6885967A27A02F9600251729 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		6885967D27A0321C00251729 /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +85,9 @@
 				686DA14A279F6EF700576175 /* Products.plist */,
 				686DA14B279F6EF700576175 /* Products.storekit */,
 				686DA123279F6C3600576175 /* ContentView.swift */,
+				6885967A27A02F9600251729 /* MainView.swift */,
 				686DA150279F6F7900576175 /* ProductInfo.swift */,
+				6885967D27A0321C00251729 /* ProductView.swift */,
 				686DA122279F6C3600576175 /* StoreHelperDemoApp.swift */,
 				686DA124279F6C3700576175 /* Assets.xcassets */,
 			);
@@ -224,6 +232,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				686DA151279F6F7900576175 /* ProductInfo.swift in Sources */,
+				6885967B27A02F9600251729 /* MainView.swift in Sources */,
+				6885967E27A0321C00251729 /* ProductView.swift in Sources */,
 				686DA134279F6C3700576175 /* ContentView.swift in Sources */,
 				686DA132279F6C3700576175 /* StoreHelperDemoApp.swift in Sources */,
 			);
@@ -234,6 +244,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				686DA152279F6F7900576175 /* ProductInfo.swift in Sources */,
+				6885967C27A02F9600251729 /* MainView.swift in Sources */,
+				6885967F27A0321C00251729 /* ProductView.swift in Sources */,
 				686DA135279F6C3700576175 /* ContentView.swift in Sources */,
 				686DA133279F6C3700576175 /* StoreHelperDemoApp.swift in Sources */,
 			);
