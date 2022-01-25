@@ -1,11 +1,11 @@
 #  StoreHelperDemo
 
-Implementing and testing In-App Purchases with `StoreKit2` in Xcode 13 with SwiftUI, Swift 5.5, iOS 15 and macOS 12.
+Implementing and testing in-App purchases with `StoreKit2` and `StoreHelper` in **Xcode 13** with **SwiftUI**, **Swift 5.5**, **iOS 15** and **macOS 12**.
 
 ---
 
 # Description
-![[StoreHelper Demo 0b.png | 125]]
+![](./readme-assets/StoreHelperDemo0c.png)
 
 This document describes how to create an example app that demonstrates how to support in-app purchases with **SwiftUI**, `StoreHelper`, `StoreKit2`, **Xcode 13**, **iOS 15** and **macOS 12**.
 
@@ -15,8 +15,7 @@ This document describes how to create an example app that demonstrates how to su
 ---
 
 # Quick Start
-## Use StoreHelper to support in-app purchases
-The following steps show to use `StoreHelper` to create bare-bones demo app that supports in-app purchases on **iOS 15** and **macOS 12**.
+The following steps show to use `StoreHelper` to create a bare-bones SwiftUI demo app that supports in-app purchases on **iOS 15** and **macOS 12**.
 
 ## What you'll need
 - **Xcode 13** installed on your Mac
@@ -24,14 +23,17 @@ The following steps show to use `StoreHelper` to create bare-bones demo app that
 - About 15-minutes!
 
 # Steps
-- Open Xcode and create a new project. Use either the iOS app, macOS app or multi-platform app template (these steps use the multi-platform template to create an app named "StoreHelperExample")
+- Open Xcode and create a new project. Use either the **iOS app**, **macOS app** or **multi-platform app** template. These steps use the multi-platform template to create an app named **"StoreHelperDemo"**
 - Select **File > Add Packages...**
-- Paste the URL of the `StoreHelper` package into the search box: https://github.com/russell-archer/StoreHelper
+- Paste the URL of the `StoreHelper` package into the search box: 
+
+    - https://github.com/russell-archer/StoreHelper
+
 - Click **Add Package**:
 
 ![](./readme-assets/StoreHelperDemo101.png)
 
-- Xcode will fetch the package and then display a confirmation. Click **Add Package**:
+- Xcode will fetch the package from GitHub and then display a confirmation. Click **Add Package**:
 
 ![](./readme-assets/StoreHelperDemo102.png)
 
@@ -39,7 +41,7 @@ The following steps show to use `StoreHelper` to create bare-bones demo app that
 
 ![](./readme-assets/StoreHelperDemo103.png)
 
-- Notice that `StoreHelper` and the `swift-collections` package (which is a dependency for `StoreHelper`) have been added to the project
+- Notice that the `StoreHelper` and `swift-collections` (which is a dependency for `StoreHelper`) packages have been added to the project
 - If you expand the `StoreHelper` package you'll be able to see the source:
 
 ![](./readme-assets/StoreHelperDemo104.png)
@@ -54,6 +56,12 @@ The following steps show to use `StoreHelper` to create bare-bones demo app that
 ![](./readme-assets/StoreHelperDemo106.png)
 
 - Open `StoreHelperExampleApp.swift` and replace the existing code with the following:
+
+> Alternatively, you can copy everything required for the **StoreHelperDemo** app from the **StoreHelper > Samples** folder:
+> - Copy all files in **StoreHelper > Samples > Code** into your project's **Shared** folder
+> - Copy all files in **StoreHelper > Samples > Configuration** into your project's **Shared** folder
+> - Copy all files in **StoreHelper > Samples > Code** into your project's **Shared** folder
+> - Add all the images in **StoreHelper > Samples > Images** into your project's **Asset Catalog** folder
 
 ```swift
 import SwiftUI

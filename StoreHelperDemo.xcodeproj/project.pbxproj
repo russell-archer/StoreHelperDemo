@@ -42,6 +42,17 @@
 		686DA14B279F6EF700576175 /* Products.storekit */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Products.storekit; sourceTree = "<group>"; };
 		686DA150279F6F7900576175 /* ProductInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductInfo.swift; sourceTree = "<group>"; };
 		686DA153279F724000576175 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		6872BBF827A06A9C00BA26DC /* StoreHelperDemo108.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StoreHelperDemo108.png; sourceTree = "<group>"; };
+		6872BBF927A06A9C00BA26DC /* StoreHelperDemo0b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StoreHelperDemo0b.png; sourceTree = "<group>"; };
+		6872BBFA27A06A9C00BA26DC /* StoreHelperDemo103.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StoreHelperDemo103.png; sourceTree = "<group>"; };
+		6872BBFB27A06A9C00BA26DC /* StoreHelperDemo102.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StoreHelperDemo102.png; sourceTree = "<group>"; };
+		6872BBFC27A06A9C00BA26DC /* StoreHelperDemo0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StoreHelperDemo0.png; sourceTree = "<group>"; };
+		6872BBFD27A06A9C00BA26DC /* StoreHelperDemo101.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StoreHelperDemo101.png; sourceTree = "<group>"; };
+		6872BBFE27A06A9C00BA26DC /* StoreHelperDemo105.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StoreHelperDemo105.png; sourceTree = "<group>"; };
+		6872BBFF27A06A9C00BA26DC /* StoreHelperDemo104.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StoreHelperDemo104.png; sourceTree = "<group>"; };
+		6872BC0027A06A9C00BA26DC /* StoreHelperDemo106.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StoreHelperDemo106.png; sourceTree = "<group>"; };
+		6872BC0127A06A9C00BA26DC /* StoreHelperDemo107.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StoreHelperDemo107.png; sourceTree = "<group>"; };
+		6872BC0227A06B6E00BA26DC /* StoreHelperDemo0c.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StoreHelperDemo0c.png; sourceTree = "<group>"; };
 		6885967A27A02F9600251729 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		6885967D27A0321C00251729 /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				686DA153279F724000576175 /* README.md */,
+				6872BBF727A06A9C00BA26DC /* readme-assets */,
 				686DA121279F6C3600576175 /* Shared */,
 				686DA130279F6C3700576175 /* macOS */,
 				686DA12A279F6C3700576175 /* Products */,
@@ -118,6 +130,24 @@
 				686DA146279F6EB200576175 /* StoreKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6872BBF727A06A9C00BA26DC /* readme-assets */ = {
+			isa = PBXGroup;
+			children = (
+				6872BBF827A06A9C00BA26DC /* StoreHelperDemo108.png */,
+				6872BBF927A06A9C00BA26DC /* StoreHelperDemo0b.png */,
+				6872BC0227A06B6E00BA26DC /* StoreHelperDemo0c.png */,
+				6872BBFA27A06A9C00BA26DC /* StoreHelperDemo103.png */,
+				6872BBFB27A06A9C00BA26DC /* StoreHelperDemo102.png */,
+				6872BBFC27A06A9C00BA26DC /* StoreHelperDemo0.png */,
+				6872BBFD27A06A9C00BA26DC /* StoreHelperDemo101.png */,
+				6872BBFE27A06A9C00BA26DC /* StoreHelperDemo105.png */,
+				6872BBFF27A06A9C00BA26DC /* StoreHelperDemo104.png */,
+				6872BC0027A06A9C00BA26DC /* StoreHelperDemo106.png */,
+				6872BC0127A06A9C00BA26DC /* StoreHelperDemo107.png */,
+			);
+			path = "readme-assets";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -432,6 +462,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -460,6 +491,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
