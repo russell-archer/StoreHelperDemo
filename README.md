@@ -254,10 +254,10 @@ struct ProductInfoDefault: View {
 - Repeat the previous step for the **macOS target**
 - Select the **iOS target** and run it in the simulator:
     - The MainView provides navigation to the **Products List** and product access views
-	- The **Products List** view displays a list of products, along with images and descriptions
-	- Try purchasing the **Large Flowers** product
-	- Your demo app supports a complete range of in-app purchase-related features. See the documentation for `StoreHelper` for a full list of features
-	- Try selecting "Large Flowers" from the main view. If you've purchased it you should see that you have access, otherwise you'll see a "no access" error 
+    - The **Products List** view displays a list of products, along with images and descriptions
+    - Try purchasing the **Large Flowers** product
+    - Your demo app supports a complete range of in-app purchase-related features. See the documentation for `StoreHelper` for a full list of features
+    - Try selecting "Large Flowers" from the main view. If you've purchased it you should see that you have access, otherwise you'll see a "no access" error 
 
 ![](./readme-assets/StoreHelperDemo108.png)
 
