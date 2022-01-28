@@ -7,10 +7,13 @@ Implementing and testing in-App purchases with `StoreKit2` and `StoreHelper` in 
 # Description
 ![](./readme-assets/StoreHelperDemo0c.png)
 
+- See [StoreHelper](https://github.com/russell-archer/StoreHelper) for an overview of the `StoreHelper` package
+- See [StoreHelper Guide](https://github.com/russell-archer/StoreHelper/blob/main/Documentation/guide.md) for in-depth discussion and tutorial on using `StoreHelper`, `StoreKit2` with **Xcode 13**, **iOS 15** and **macOS 12**
+
 This document describes how to create an example app that demonstrates how to support in-app purchases with **SwiftUI**, `StoreHelper`, `StoreKit2`, **Xcode 13**, **iOS 15** and **macOS 12**.
 
-- ### See [StoreHelper](https://github.com/russell-archer/StoreHelper) for full details of the `StoreHelper` package
-- ### See [In-App Purchases with Xcode 12 and iOS 14](https://github.com/russell-archer/IAPDemo) for details of working with StoreKit1 in **iOS 14**
+- See [StoreHelper](https://github.com/russell-archer/StoreHelper) for full details of the `StoreHelper` package
+- See [In-App Purchases with Xcode 12 and iOS 14](https://github.com/russell-archer/IAPDemo) for details of working with StoreKit1 in **iOS 14**
 
 ---
 
@@ -72,17 +75,12 @@ import StoreHelper
 struct StoreHelperDemoApp: App {
     @StateObject var storeHelper = StoreHelper()
     
-    #if os(macOS)
-    let minScreenSize = CGSize(width: 600, height: 600)
-    let defaultScreenSize = CGSize(width: 700, height: 700)
-    #endif
-    
     var body: some Scene {
         WindowGroup {
             MainView().environmentObject(storeHelper)
                 #if os(macOS)
-                .frame(minWidth: minScreenSize.width, idealWidth: defaultScreenSize.width, minHeight: minScreenSize.height, idealHeight: defaultScreenSize.height)
-                .font(.title2)  // Default font
+                .frame(minWidth: 700, idealWidth: 700, minHeight: 700, idealHeight: 700)
+                .font(.title2)
                 #endif
         }
     }
@@ -103,15 +101,16 @@ struct MainView: View {
     
     var body: some View {
         NavigationView {
-            VStack {
-                NavigationLink(destination: ContentView()) { Text("Product List").font(.title) }.padding()
-                NavigationLink(destination: ProductView(productId: largeFlowersId)) { Text("Large Flowers").font(.title) }.padding()
-                NavigationLink(destination: ProductView(productId: smallFlowersId)) { Text("Small Flowers").font(.title) }.padding()
-                Spacer()
+            List {
+                NavigationLink(destination: ContentView()) { Text("Product List").font(.largeTitle).padding()}
+                NavigationLink(destination: ProductView(productId: largeFlowersId)) { Text("Large Flowers").font(.largeTitle).padding()}
+                NavigationLink(destination: ProductView(productId: smallFlowersId)) { Text("Small Flowers").font(.largeTitle).padding()}
             }
         }
+        #if os(iOS)
         .navigationViewStyle(.stack)
         .navigationBarTitle(Text("StoreHelperDemo"), displayMode: .large)
+        #endif
     }
 }
 ```
@@ -174,10 +173,10 @@ struct ContentView: View {
             .sheet(isPresented: $showProductInfoSheet) {
                 VStack {
                     // Pull in text and images that explain the particular product identified by `productId`
-                    ProductInfo(productInfoProductId: $productId)
+                    ProductInfo(productInfoProductId: $productId, showProductInfoSheet: $showProductInfoSheet)
                 }
                 #if os(macOS)
-                .frame(minWidth: 700, idealWidth: 700, maxWidth: 700, minHeight: 700, idealHeight: 800, maxHeight: 900)
+                .frame(minWidth: 500, idealWidth: 500, maxWidth: 500, minHeight: 500, idealHeight: 500, maxHeight: 500)
                 #endif
             }
         }
@@ -199,12 +198,19 @@ import StoreKit
 
 struct ProductInfo: View {
     @EnvironmentObject var storeHelper: StoreHelper
-    @Binding var productInfoProductId: ProductId
     @State private var product: Product?
+    @Binding var productInfoProductId: ProductId
+    @Binding var showProductInfoSheet: Bool
     
     var body: some View {
         VStack {
-            HStack { Spacer() }
+            HStack {
+                Spacer()
+                Image(systemName: "xmark.circle")
+                    .foregroundColor(.secondary)
+                    .padding(EdgeInsets(top: 10, leading: 10, bottom: 0, trailing: 10))
+            }
+            .onTapGesture { withAnimation { showProductInfoSheet = false }}
             ScrollView {
                 VStack {
                     if let p = product {
@@ -276,6 +282,12 @@ struct ProductInfoDefault: View {
     - Try selecting "Large Flowers" from the main view. If you've purchased it you should see that you have access, otherwise you'll see a "no access" error 
 
 ![](./readme-assets/StoreHelperDemo108.png)
+
+- Now select the **macOS target** and run it on your Mac:
+
+![](./readme-assets/StoreHelperDemo108b.png)
+
+![](./readme-assets/StoreHelperDemo108c.png)
 
 ---
 
