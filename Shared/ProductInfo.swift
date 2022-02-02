@@ -17,17 +17,10 @@ struct ProductInfo: View {
     
     var body: some View {
         VStack {
-            HStack {
-                Spacer()
-                Image(systemName: "xmark.circle")
-                    .foregroundColor(.secondary)
-                    .padding(EdgeInsets(top: 10, leading: 10, bottom: 0, trailing: 10))
-            }
-            .onTapGesture { withAnimation { showProductInfoSheet = false }}
+            SheetBarView(showSheet: $showProductInfoSheet, title: product?.displayName ?? "Product Info")
             ScrollView {
                 VStack {
                     if let p = product {
-                        Text(p.displayName).font(.largeTitle).foregroundColor(.blue)
                         Image(p.id)
                             .resizable()
                             .frame(maxWidth: 200, maxHeight: 200)
