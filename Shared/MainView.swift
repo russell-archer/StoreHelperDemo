@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct MainView: View {
-    let largeFlowersId = "com.rarcher.nonconsumable.flowers-large"
-    let smallFlowersId = "com.rarcher.nonconsumable.flowers-small"
+    let largeFlowersId = "com.rarcher.nonconsumable.flowers.large"
+    let smallFlowersId = "com.rarcher.nonconsumable.flowers.small"
     
     var body: some View {
         NavigationView {

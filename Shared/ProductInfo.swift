@@ -30,8 +30,8 @@ struct ProductInfo: View {
                     
                     // Pull in the text appropriate for the product
                     switch productInfoProductId {
-                        case "com.rarcher.nonconsumable.flowers-large": ProductInfoFlowersLarge()
-                        case "com.rarcher.nonconsumable.flowers-small": ProductInfoFlowersSmall()
+                        case "com.rarcher.nonconsumable.flowers.large": ProductInfoFlowersLarge()
+                        case "com.rarcher.nonconsumable.flowers.small": ProductInfoFlowersSmall()
                         default: ProductInfoDefault()
                     }
                 }
