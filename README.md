@@ -74,10 +74,12 @@ import StoreHelper
 @main
 struct StoreHelperDemoApp: App {
     @StateObject var storeHelper = StoreHelper()
-    
+
     var body: some Scene {
         WindowGroup {
-            MainView().environmentObject(storeHelper)
+            MainView()
+                .environmentObject(storeHelper)
+                .onAppear { storeHelper.start() }  // Start listening for transactions, get localized product info
                 #if os(macOS)
                 .frame(minWidth: 700, idealWidth: 700, minHeight: 700, idealHeight: 700)
                 .font(.title2)
@@ -88,6 +90,7 @@ struct StoreHelperDemoApp: App {
 ```
 
 - Notice how we `import StoreHelper`, create an instance of the `StoreHelper` class and add it to the SwiftUI view hierarchy using the `.environment()` modifier 
+- We also call `StoreHelper.start()` to start listening for transactions and get localized product info
 
 ## Create MainView
 - Create a new SwiftUI `View` in the **Shared** folder named `MainView` and replace the existing code with the following:
@@ -96,8 +99,8 @@ struct StoreHelperDemoApp: App {
 import SwiftUI
 
 struct MainView: View {
-    let largeFlowersId = "com.rarcher.nonconsumable.flowers-large"
-    let smallFlowersId = "com.rarcher.nonconsumable.flowers-small"
+    let largeFlowersId = "com.rarcher.nonconsumable.flowers.large"
+    let smallFlowersId = "com.rarcher.nonconsumable.flowers.small"
     
     var body: some View {
         NavigationView {
@@ -224,8 +227,8 @@ struct ProductInfo: View {
                     
                     // Pull in the text appropriate for the product
                     switch productInfoProductId {
-                        case "com.rarcher.nonconsumable.flowers-large": ProductInfoFlowersLarge()
-                        case "com.rarcher.nonconsumable.flowers-small": ProductInfoFlowersSmall()
+                        case "com.rarcher.nonconsumable.flowers.large": ProductInfoFlowersLarge()
+                        case "com.rarcher.nonconsumable.flowers.small": ProductInfoFlowersSmall()
                         default: ProductInfoDefault()
                     }
                 }
