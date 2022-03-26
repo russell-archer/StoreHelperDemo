@@ -10,9 +10,12 @@ import StoreHelper
 
 @main
 struct StoreHelperDemoApp: App {
+    @StateObject var storeHelper = StoreHelper()
+    
     var body: some Scene {
         WindowGroup {
-            MainView().environmentObject(StoreHelper())
+            MainView().environmentObject(storeHelper)
+                .onAppear { storeHelper.start()}
                 #if os(macOS)
                 .frame(minWidth: 700, idealWidth: 700, minHeight: 700, idealHeight: 700)
                 .font(.title2)

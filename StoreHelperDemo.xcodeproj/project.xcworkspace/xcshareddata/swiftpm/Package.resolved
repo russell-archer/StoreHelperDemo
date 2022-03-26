@@ -1,25 +1,23 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "StoreHelper",
-        "repositoryURL": "https://github.com/russell-archer/StoreHelper.git",
-        "state": {
-          "branch": "main",
-          "revision": "88613417acf1fb5629b32438fd8e025760f837ba",
-          "version": null
-        }
-      },
-      {
-        "package": "swift-collections",
-        "repositoryURL": "https://github.com/apple/swift-collections",
-        "state": {
-          "branch": null,
-          "revision": "48254824bb4248676bf7ce56014ff57b142b77eb",
-          "version": "1.0.2"
-        }
+  "pins" : [
+    {
+      "identity" : "storehelper",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/russell-archer/StoreHelper.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "5f427c0185d1a2054894ac08a9434920917becfc"
       }
-    ]
-  },
-  "version": 1
+    },
+    {
+      "identity" : "swift-collections",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-collections",
+      "state" : {
+        "revision" : "48254824bb4248676bf7ce56014ff57b142b77eb",
+        "version" : "1.0.2"
+      }
+    }
+  ],
+  "version" : 2
 }
