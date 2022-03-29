@@ -52,13 +52,11 @@ struct SubscriptionRow: View {
                 // Display more subscription info here...
             }
         }
-        .onAppear {
-            Task.init {
-                isSubscribed = await subscribed(to: productId)
-                if isSubscribed {
-                    if let subscriptionInfo = await getSubscriptionInfo() {
-                        detailedSubscriptionInfo = await getDetailedSubscriptionInfo(for: subscriptionInfo)
-                    }
+        .task {
+            isSubscribed = await subscribed(to: productId)
+            if isSubscribed {
+                if let subscriptionInfo = await getSubscriptionInfo() {
+                    detailedSubscriptionInfo = await getDetailedSubscriptionInfo(for: subscriptionInfo)
                 }
             }
         }
