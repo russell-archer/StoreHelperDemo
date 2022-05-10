@@ -27,6 +27,18 @@
 		6885967C27A02F9600251729 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6885967A27A02F9600251729 /* MainView.swift */; };
 		6885967E27A0321C00251729 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6885967D27A0321C00251729 /* ProductView.swift */; };
 		6885967F27A0321C00251729 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6885967D27A0321C00251729 /* ProductView.swift */; };
+		6890B1662813083D00119657 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6890B1652813083D00119657 /* Assets.xcassets */; };
+		6890B16E2813086000119657 /* StoreHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 6890B16D2813086000119657 /* StoreHelper */; };
+		6890B1702813086F00119657 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6890B16F2813086F00119657 /* StoreKit.framework */; };
+		6890B1712813103700119657 /* Products.plist in Resources */ = {isa = PBXBuildFile; fileRef = 686DA14A279F6EF700576175 /* Products.plist */; };
+		6890B1722813103700119657 /* SubscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E622AB27EFB88200836E6F /* SubscriptionView.swift */; };
+		6890B1732813103700119657 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686DA123279F6C3600576175 /* ContentView.swift */; };
+		6890B1742813103700119657 /* ProductInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686DA150279F6F7900576175 /* ProductInfo.swift */; };
+		6890B1752813103700119657 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6885967A27A02F9600251729 /* MainView.swift */; };
+		6890B1762813103700119657 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6885967D27A0321C00251729 /* ProductView.swift */; };
+		6890B1772813103700119657 /* Products.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 686DA14B279F6EF700576175 /* Products.storekit */; };
+		6890B1782813103700119657 /* StoreHelperDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686DA122279F6C3600576175 /* StoreHelperDemoApp.swift */; };
+		6890B1792813103C00119657 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 686DA124279F6C3700576175 /* Assets.xcassets */; };
 		68E622AC27EFB88200836E6F /* SubscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E622AB27EFB88200836E6F /* SubscriptionView.swift */; };
 		68E622AD27EFB88200836E6F /* SubscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E622AB27EFB88200836E6F /* SubscriptionView.swift */; };
 /* End PBXBuildFile section */
@@ -57,6 +69,9 @@
 		6872BC0227A06B6E00BA26DC /* StoreHelperDemo0c.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StoreHelperDemo0c.png; sourceTree = "<group>"; };
 		6885967A27A02F9600251729 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		6885967D27A0321C00251729 /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
+		6890B15F2813083C00119657 /* StoreHelperDemo (tvOS).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "StoreHelperDemo (tvOS).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6890B1652813083D00119657 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6890B16F2813086F00119657 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS15.4.sdk/System/Library/Frameworks/StoreKit.framework; sourceTree = DEVELOPER_DIR; };
 		68E622AB27EFB88200836E6F /* SubscriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,6 +94,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6890B15C2813083C00119657 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6890B16E2813086000119657 /* StoreHelper in Frameworks */,
+				6890B1702813086F00119657 /* StoreKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -89,6 +113,7 @@
 				6872BBF727A06A9C00BA26DC /* readme-assets */,
 				686DA121279F6C3600576175 /* Shared */,
 				686DA130279F6C3700576175 /* macOS */,
+				6890B1602813083C00119657 /* tvOS */,
 				686DA12A279F6C3700576175 /* Products */,
 				686DA143279F6E9600576175 /* Frameworks */,
 			);
@@ -115,6 +140,7 @@
 			children = (
 				686DA129279F6C3700576175 /* StoreHelperDemo.app */,
 				686DA12F279F6C3700576175 /* StoreHelperDemo.app */,
+				6890B15F2813083C00119657 /* StoreHelperDemo (tvOS).app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -130,6 +156,7 @@
 		686DA143279F6E9600576175 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6890B16F2813086F00119657 /* StoreKit.framework */,
 				686DA148279F6EBA00576175 /* StoreKit.framework */,
 				686DA146279F6EB200576175 /* StoreKit.framework */,
 			);
@@ -152,6 +179,14 @@
 				6872BC0127A06A9C00BA26DC /* StoreHelperDemo107.png */,
 			);
 			path = "readme-assets";
+			sourceTree = "<group>";
+		};
+		6890B1602813083C00119657 /* tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				6890B1652813083D00119657 /* Assets.xcassets */,
+			);
+			path = tvOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +232,26 @@
 			productReference = 686DA12F279F6C3700576175 /* StoreHelperDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		6890B15E2813083C00119657 /* StoreHelperDemo (tvOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6890B16C2813083D00119657 /* Build configuration list for PBXNativeTarget "StoreHelperDemo (tvOS)" */;
+			buildPhases = (
+				6890B15B2813083C00119657 /* Sources */,
+				6890B15C2813083C00119657 /* Frameworks */,
+				6890B15D2813083C00119657 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "StoreHelperDemo (tvOS)";
+			packageProductDependencies = (
+				6890B16D2813086000119657 /* StoreHelper */,
+			);
+			productName = "StoreHelperDemo (tvOS)";
+			productReference = 6890B15F2813083C00119657 /* StoreHelperDemo (tvOS).app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -204,7 +259,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1320;
+				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
 					686DA128279F6C3700576175 = {
@@ -212,6 +267,9 @@
 					};
 					686DA12E279F6C3700576175 = {
 						CreatedOnToolsVersion = 13.2;
+					};
+					6890B15E2813083C00119657 = {
+						CreatedOnToolsVersion = 13.3;
 					};
 				};
 			};
@@ -233,6 +291,7 @@
 			targets = (
 				686DA128279F6C3700576175 /* StoreHelperDemo (iOS) */,
 				686DA12E279F6C3700576175 /* StoreHelperDemo (macOS) */,
+				6890B15E2813083C00119657 /* StoreHelperDemo (tvOS) */,
 			);
 		};
 /* End PBXProject section */
@@ -255,6 +314,17 @@
 				686DA14D279F6EF700576175 /* Products.plist in Resources */,
 				686DA14F279F6EF700576175 /* Products.storekit in Resources */,
 				686DA137279F6C3700576175 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6890B15D2813083C00119657 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6890B1712813103700119657 /* Products.plist in Resources */,
+				6890B1772813103700119657 /* Products.storekit in Resources */,
+				6890B1792813103C00119657 /* Assets.xcassets in Resources */,
+				6890B1662813083D00119657 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +354,19 @@
 				686DA135279F6C3700576175 /* ContentView.swift in Sources */,
 				686DA133279F6C3700576175 /* StoreHelperDemoApp.swift in Sources */,
 				68E622AD27EFB88200836E6F /* SubscriptionView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6890B15B2813083C00119657 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6890B1782813103700119657 /* StoreHelperDemoApp.swift in Sources */,
+				6890B1762813103700119657 /* ProductView.swift in Sources */,
+				6890B1742813103700119657 /* ProductInfo.swift in Sources */,
+				6890B1752813103700119657 /* MainView.swift in Sources */,
+				6890B1732813103700119657 /* ContentView.swift in Sources */,
+				6890B1722813103700119657 /* SubscriptionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,6 +603,63 @@
 			};
 			name = Release;
 		};
+		6890B16A2813083D00119657 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = R6BE99W3FU;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rarcher.StoreHelperDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 15.4;
+			};
+			name = Debug;
+		};
+		6890B16B2813083D00119657 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = R6BE99W3FU;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rarcher.StoreHelperDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 15.4;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -550,6 +690,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		6890B16C2813083D00119657 /* Build configuration list for PBXNativeTarget "StoreHelperDemo (tvOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6890B16A2813083D00119657 /* Debug */,
+				6890B16B2813083D00119657 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -570,6 +719,11 @@
 			productName = StoreHelper;
 		};
 		686DA144279F6E9600576175 /* StoreHelper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 686DA140279F6E6900576175 /* XCRemoteSwiftPackageReference "StoreHelper" */;
+			productName = StoreHelper;
+		};
+		6890B16D2813086000119657 /* StoreHelper */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 686DA140279F6E6900576175 /* XCRemoteSwiftPackageReference "StoreHelper" */;
 			productName = StoreHelper;
