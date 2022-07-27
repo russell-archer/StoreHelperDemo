@@ -7,14 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		680910002891920300B3A842 /* StoreHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 68090FFF2891920300B3A842 /* StoreHelper */; };
 		686DA132279F6C3700576175 /* StoreHelperDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686DA122279F6C3600576175 /* StoreHelperDemoApp.swift */; };
 		686DA133279F6C3700576175 /* StoreHelperDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686DA122279F6C3600576175 /* StoreHelperDemoApp.swift */; };
 		686DA134279F6C3700576175 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686DA123279F6C3600576175 /* ContentView.swift */; };
 		686DA135279F6C3700576175 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686DA123279F6C3600576175 /* ContentView.swift */; };
 		686DA136279F6C3700576175 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 686DA124279F6C3700576175 /* Assets.xcassets */; };
 		686DA137279F6C3700576175 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 686DA124279F6C3700576175 /* Assets.xcassets */; };
-		686DA142279F6E6900576175 /* StoreHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 686DA141279F6E6900576175 /* StoreHelper */; };
-		686DA145279F6E9600576175 /* StoreHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 686DA144279F6E9600576175 /* StoreHelper */; };
 		686DA147279F6EB200576175 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 686DA146279F6EB200576175 /* StoreKit.framework */; };
 		686DA149279F6EBA00576175 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 686DA148279F6EBA00576175 /* StoreKit.framework */; };
 		686DA14C279F6EF700576175 /* Products.plist in Resources */ = {isa = PBXBuildFile; fileRef = 686DA14A279F6EF700576175 /* Products.plist */; };
@@ -28,7 +27,6 @@
 		6885967E27A0321C00251729 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6885967D27A0321C00251729 /* ProductView.swift */; };
 		6885967F27A0321C00251729 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6885967D27A0321C00251729 /* ProductView.swift */; };
 		6890B1662813083D00119657 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6890B1652813083D00119657 /* Assets.xcassets */; };
-		6890B16E2813086000119657 /* StoreHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 6890B16D2813086000119657 /* StoreHelper */; };
 		6890B1702813086F00119657 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6890B16F2813086F00119657 /* StoreKit.framework */; };
 		6890B1712813103700119657 /* Products.plist in Resources */ = {isa = PBXBuildFile; fileRef = 686DA14A279F6EF700576175 /* Products.plist */; };
 		6890B1722813103700119657 /* SubscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E622AB27EFB88200836E6F /* SubscriptionView.swift */; };
@@ -39,6 +37,8 @@
 		6890B1772813103700119657 /* Products.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 686DA14B279F6EF700576175 /* Products.storekit */; };
 		6890B1782813103700119657 /* StoreHelperDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686DA122279F6C3600576175 /* StoreHelperDemoApp.swift */; };
 		6890B1792813103C00119657 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 686DA124279F6C3700576175 /* Assets.xcassets */; };
+		68B56A58286DE2020093F3EE /* StoreHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 68B56A57286DE2020093F3EE /* StoreHelper */; };
+		68B56A5A286DE20F0093F3EE /* StoreHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 68B56A59286DE20F0093F3EE /* StoreHelper */; };
 		68E622AC27EFB88200836E6F /* SubscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E622AB27EFB88200836E6F /* SubscriptionView.swift */; };
 		68E622AD27EFB88200836E6F /* SubscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E622AB27EFB88200836E6F /* SubscriptionView.swift */; };
 /* End PBXBuildFile section */
@@ -80,7 +80,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				686DA142279F6E6900576175 /* StoreHelper in Frameworks */,
+				680910002891920300B3A842 /* StoreHelper in Frameworks */,
+				68B56A58286DE2020093F3EE /* StoreHelper in Frameworks */,
 				686DA147279F6EB200576175 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -89,7 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				686DA145279F6E9600576175 /* StoreHelper in Frameworks */,
+				68B56A5A286DE20F0093F3EE /* StoreHelper in Frameworks */,
 				686DA149279F6EBA00576175 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -98,7 +99,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6890B16E2813086000119657 /* StoreHelper in Frameworks */,
 				6890B1702813086F00119657 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,7 +206,8 @@
 			);
 			name = "StoreHelperDemo (iOS)";
 			packageProductDependencies = (
-				686DA141279F6E6900576175 /* StoreHelper */,
+				68B56A57286DE2020093F3EE /* StoreHelper */,
+				68090FFF2891920300B3A842 /* StoreHelper */,
 			);
 			productName = "StoreHelperDemo (iOS)";
 			productReference = 686DA129279F6C3700576175 /* StoreHelperDemo.app */;
@@ -226,7 +227,7 @@
 			);
 			name = "StoreHelperDemo (macOS)";
 			packageProductDependencies = (
-				686DA144279F6E9600576175 /* StoreHelper */,
+				68B56A59286DE20F0093F3EE /* StoreHelper */,
 			);
 			productName = "StoreHelperDemo (macOS)";
 			productReference = 686DA12F279F6C3700576175 /* StoreHelperDemo.app */;
@@ -246,7 +247,6 @@
 			);
 			name = "StoreHelperDemo (tvOS)";
 			packageProductDependencies = (
-				6890B16D2813086000119657 /* StoreHelper */,
 			);
 			productName = "StoreHelperDemo (tvOS)";
 			productReference = 6890B15F2813083C00119657 /* StoreHelperDemo (tvOS).app */;
@@ -260,7 +260,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1330;
-				LastUpgradeCheck = 1320;
+				LastUpgradeCheck = 1400;
 				TargetAttributes = {
 					686DA128279F6C3700576175 = {
 						CreatedOnToolsVersion = 13.2;
@@ -283,7 +283,7 @@
 			);
 			mainGroup = 686DA11C279F6C3600576175;
 			packageReferences = (
-				686DA140279F6E6900576175 /* XCRemoteSwiftPackageReference "StoreHelper" */,
+				68090FFE2891920300B3A842 /* XCRemoteSwiftPackageReference "StoreHelper" */,
 			);
 			productRefGroup = 686DA12A279F6C3700576175 /* Products */;
 			projectDirPath = "";
@@ -407,6 +407,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -466,6 +467,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -499,7 +501,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -529,7 +531,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -555,6 +557,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = R6BE99W3FU;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -584,6 +587,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = R6BE99W3FU;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -702,7 +706,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		686DA140279F6E6900576175 /* XCRemoteSwiftPackageReference "StoreHelper" */ = {
+		68090FFE2891920300B3A842 /* XCRemoteSwiftPackageReference "StoreHelper" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/russell-archer/StoreHelper.git";
 			requirement = {
@@ -713,19 +717,17 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		686DA141279F6E6900576175 /* StoreHelper */ = {
+		68090FFF2891920300B3A842 /* StoreHelper */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 686DA140279F6E6900576175 /* XCRemoteSwiftPackageReference "StoreHelper" */;
+			package = 68090FFE2891920300B3A842 /* XCRemoteSwiftPackageReference "StoreHelper" */;
 			productName = StoreHelper;
 		};
-		686DA144279F6E9600576175 /* StoreHelper */ = {
+		68B56A57286DE2020093F3EE /* StoreHelper */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 686DA140279F6E6900576175 /* XCRemoteSwiftPackageReference "StoreHelper" */;
 			productName = StoreHelper;
 		};
-		6890B16D2813086000119657 /* StoreHelper */ = {
+		68B56A59286DE20F0093F3EE /* StoreHelper */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 686DA140279F6E6900576175 /* XCRemoteSwiftPackageReference "StoreHelper" */;
 			productName = StoreHelper;
 		};
 /* End XCSwiftPackageProductDependency section */

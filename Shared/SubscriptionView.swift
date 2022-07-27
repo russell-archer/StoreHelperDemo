@@ -46,11 +46,6 @@ struct SubscriptionRow: View {
                     .multilineTextAlignment(.center)
                     .padding()
             }
-            
-            if isSubscribed, let info = detailedSubscriptionInfo {
-                Text("Your subscription to \(info.name) renews in \(info.renewsIn ?? "unknown")").multilineTextAlignment(.center)
-                // Display more subscription info here...
-            }
         }
         .task {
             isSubscribed = await subscribed(to: productId)

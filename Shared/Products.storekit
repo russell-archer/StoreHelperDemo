@@ -111,6 +111,9 @@
           "adHocOffers" : [
 
           ],
+          "codeOffers" : [
+
+          ],
           "displayPrice" : "19.99",
           "familyShareable" : false,
           "groupNumber" : 1,
@@ -138,6 +141,9 @@
           "adHocOffers" : [
 
           ],
+          "codeOffers" : [
+
+          ],
           "displayPrice" : "11.99",
           "familyShareable" : false,
           "groupNumber" : 2,
@@ -158,6 +164,9 @@
         },
         {
           "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
 
           ],
           "displayPrice" : "4.99",
@@ -183,6 +192,6 @@
   ],
   "version" : {
     "major" : 1,
-    "minor" : 1
+    "minor" : 2
   }
 }
