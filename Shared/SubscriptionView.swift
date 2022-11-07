@@ -8,6 +8,7 @@
 import SwiftUI
 import StoreHelper
 
+@available(iOS 15.0, macOS 12.0, *)
 struct SubscriptionView: View {
     @EnvironmentObject var storeHelper: StoreHelper
     @State private var productIds: [ProductId]?
@@ -32,6 +33,7 @@ struct SubscriptionView: View {
     }
 }
 
+@available(iOS 15.0, macOS 12.0, *)
 struct SubscriptionRow: View {
     @EnvironmentObject var storeHelper: StoreHelper
     @State private var isSubscribed = false

@@ -8,6 +8,7 @@
 import SwiftUI
 import StoreHelper
 
+@available(iOS 15.0, macOS 12.0, *)
 @main
 struct StoreHelperDemoApp: App {
     @StateObject var storeHelper = StoreHelper()
@@ -15,7 +16,7 @@ struct StoreHelperDemoApp: App {
     var body: some Scene {
         WindowGroup {
             MainView().environmentObject(storeHelper)
-                .onAppear { storeHelper.start()}
+                .task { storeHelper.start()}
                 #if os(macOS)
                 .frame(minWidth: 700, idealWidth: 700, minHeight: 700, idealHeight: 700)
                 .font(.title2)
