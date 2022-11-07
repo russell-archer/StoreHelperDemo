@@ -1,8 +1,6 @@
 #  StoreHelperDemo
 
-Implementing and testing in-App purchases with `StoreKit2` and `StoreHelper` in **Xcode 13** with **SwiftUI**, **Swift 5.5**, **iOS 15** and **macOS 12**.
-
-> **Note:** StoreHelper has been tested on Xcode 14 Beta 2 with iOS 16 and seems to work as expected.
+Implementing and testing in-App purchases with `StoreKit2` and `StoreHelper` in **Xcode 14** with **SwiftUI**, **Swift 5.7**, **iOS 16** and **macOS 13**.
 
 ---
 
@@ -12,7 +10,8 @@ Implementing and testing in-App purchases with `StoreKit2` and `StoreHelper` in 
 - See [StoreHelper](https://github.com/russell-archer/StoreHelper) for an overview of the `StoreHelper` package
 - See [StoreHelper Guide](https://github.com/russell-archer/StoreHelper/blob/main/Documentation/guide.md) for in-depth discussion and tutorial on using `StoreHelper`, `StoreKit2` with **Xcode 13**, **iOS 15** and **macOS 12**
 
-This document describes how to create an example app that demonstrates how to support in-app purchases with **SwiftUI**, `StoreHelper`, `StoreKit2`, **Xcode 13+**, **iOS 15+** and **macOS 12+**.
+This document describes how to create an example app that demonstrates how to support in-app purchases with **SwiftUI**, `StoreHelper`, `StoreKit2`, **Xcode 14** with **SwiftUI**, **Swift 5.7**, **iOS 16** and **macOS 13**.
+Note that **Xcode 13**, **iOS 15** and **macOS 12** are also supported.
 
 - See [StoreHelper](https://github.com/russell-archer/StoreHelper) for full details of the `StoreHelper` package
 - See [In-App Purchases with Xcode 12 and iOS 14](https://github.com/russell-archer/IAPDemo) for details of working with StoreKit1 in **iOS 14**
@@ -20,10 +19,11 @@ This document describes how to create an example app that demonstrates how to su
 ---
 
 # Quick Start
-The following steps show to use `StoreHelper` to create a bare-bones SwiftUI demo app that supports in-app purchases on **iOS 15** and **macOS 12**.
+The following steps show to use `StoreHelper` to create a bare-bones SwiftUI demo app that supports in-app purchases on **iOS 16** and **macOS 13**.
+**iOS 15** and **macOS 12** are also supported.
 
 ## What you'll need
-- **Xcode 13** installed on your Mac
+- **Xcode 14** or **Xcode 13** installed on your Mac
 - Basic familiarity with **Xcode**, **Swift** and **SwiftUI**
 - About 15-minutes!
 

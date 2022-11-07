@@ -35,7 +35,6 @@ struct SimplePurchaseView: View {
 
 /// Provides a button that enables the user to purchase a product.
 /// The product's price is also displayed in the localized currency.
-@available(tvOS 15.0, *)
 public struct CustomPurchaseButton: View {
     
     @EnvironmentObject var storeHelper: StoreHelper
@@ -71,7 +70,6 @@ public struct CustomPurchaseButton: View {
 }
 
 /// Displays a product price and a button that enables purchasing.
-@available(tvOS 15.0, *)
 public struct CustomPriceView: View {
     @EnvironmentObject var storeHelper: StoreHelper
     @State private var canMakePayments: Bool = false
@@ -109,7 +107,6 @@ public struct CustomPriceView: View {
     }
 }
 
-@available(tvOS 15.0, *)
 public struct CustomPriceButtonText: View {
     #if os(iOS)
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
@@ -136,12 +133,10 @@ public struct CustomPriceButtonText: View {
 }
 
 /// Displays a small image that gives a visual clue to the product's purchase state.
-@available(tvOS 15.0, *)
 public struct CustomBadgeView: View {
     
     @Binding var purchaseState: PurchaseState
     
-    @available(tvOS 15.0, *)
     public var body: some View {
         
         if let options = badgeOptions() {
@@ -153,7 +148,6 @@ public struct CustomBadgeView: View {
         }
     }
     
-    @available(tvOS 15.0, *)
     public func badgeOptions() -> (badgeName: String, fgColor: Color)? {
         switch purchaseState {
             case .notStarted:               return nil
