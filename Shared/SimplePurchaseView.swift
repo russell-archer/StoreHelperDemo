@@ -94,7 +94,7 @@ public struct CustomPriceView: View {
             }
             .disabled(!canMakePayments)
             #elseif os(macOS)
-            HStack { PriceButtonText(price: price, disabled: !canMakePayments)}
+            HStack { CustomPriceButtonText(price: price, disabled: !canMakePayments)}
                 .contentShape(Rectangle())
                 .onTapGesture {
                     guard canMakePayments else { return }
