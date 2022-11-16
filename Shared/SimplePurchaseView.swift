@@ -35,17 +35,10 @@ struct SimplePurchaseView: View {
             Spacer()
         }
         .padding()
-        .task { await purchaseState(for: productId)}
-        .onChange(of: storeHelper.purchasedProducts) { _ in
-            Task.init {
-                await purchaseState(for: productId)
-            }
+        .task {
+            let purchased = (try? await storeHelper.isPurchased(productId: productId)) ?? false
+            purchaseState = purchased ? .purchased : .unknown
         }
-    }
-    
-    func purchaseState(for productId: ProductId) async {
-        let purchased = (try? await storeHelper.isPurchased(productId: productId)) ?? false
-        purchaseState = purchased ? .purchased : .unknown
     }
 }
 
