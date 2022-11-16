@@ -17,8 +17,24 @@ struct SimplePurchaseView: View {
     
     var body: some View {
         VStack {
-            PurchaseButton(purchaseState: $purchaseState, productId: productId, price: price)
+            Text("This view shows how to create a minimal purchase page for a product. The product shown is **Large Flowers**").multilineTextAlignment(.center)
+            Image(productId)
+                .resizable()
+                .frame(maxWidth: 250, maxHeight: 250)
+                .aspectRatio(contentMode: .fit)
+                .cornerRadius(25)
+            
+            PurchaseButton(purchaseState: $purchaseState, productId: productId, price: price).padding()
+            
+            if purchaseState == .purchased {
+                Text("This product has already been purchased").multilineTextAlignment(.center)
+            } else {
+                Text("This product is available for purchase").multilineTextAlignment(.center)
+            }
+            
+            Spacer()
         }
+        .padding()
         .task { await purchaseState(for: productId)}
         .onChange(of: storeHelper.purchasedProducts) { _ in
             Task.init {

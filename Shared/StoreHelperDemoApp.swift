@@ -16,10 +16,7 @@ struct StoreHelperDemoApp: App {
     var body: some Scene {
         WindowGroup {
             MainView().environmentObject(storeHelper)
-                .task {
-                    storeHelper.configurationProvider = ConfigProvider()  // Override the default configuration values used by StoreHelper
-                    storeHelper.start()  // Start listening for transactions
-                }
+                .task { storeHelper.start() } // Start listening for transactions
                 #if os(macOS)
                 .frame(minWidth: 700, idealWidth: 700, minHeight: 700, idealHeight: 700)
                 .font(.title2)
