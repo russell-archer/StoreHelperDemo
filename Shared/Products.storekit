@@ -109,20 +109,47 @@
       "subscriptions" : [
         {
           "adHocOffers" : [
-
+            {
+              "displayPrice" : "0.99",
+              "internalID" : "F148DF28",
+              "offerID" : "vip.gold.xmassale",
+              "paymentMode" : "payUpFront",
+              "referenceName" : "XmasSale",
+              "subscriptionPeriod" : "P3M"
+            },
+            {
+              "displayPrice" : "10",
+              "internalID" : "D7C1BF1F",
+              "offerID" : "vip.gold.xmassale2",
+              "paymentMode" : "payUpFront",
+              "referenceName" : "XmasSale2",
+              "subscriptionPeriod" : "P1Y"
+            }
           ],
           "codeOffers" : [
-
+            {
+              "eligibility" : [
+                "expired",
+                "new",
+                "existing"
+              ],
+              "internalID" : "7638AFBA",
+              "isStackable" : true,
+              "paymentMode" : "free",
+              "referenceName" : "Special Winter Offer",
+              "subscriptionPeriod" : "P1W"
+            }
           ],
           "displayPrice" : "19.99",
           "familyShareable" : false,
           "groupNumber" : 1,
           "internalID" : "AF41C8C8",
           "introductoryOffer" : {
-            "displayPrice" : "9.99",
-            "internalID" : "D9531218",
-            "paymentMode" : "payUpFront",
-            "subscriptionPeriod" : "P2M"
+            "displayPrice" : "1.99",
+            "internalID" : "840B334F",
+            "numberOfPeriods" : 3,
+            "paymentMode" : "payAsYouGo",
+            "subscriptionPeriod" : "P1M"
           },
           "localizations" : [
             {
@@ -190,8 +217,12 @@
       ]
     }
   ],
+  "subscriptionOffersKeyPair" : {
+    "id" : "5509FCF1",
+    "privateKey" : "MIGTAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBHkwdwIBAQQgmJ/0G8gYMyOHVltbD5jhlxrH4xPOrPwQ7MaxFFRmJ/ygCgYIKoZIzj0DAQehRANCAAR5L/4NGKsB9lNjQrE46EpPiAthZOVjn7uVPvOZnFBBXnGYAnIncBuT6ojTObFPP+n9I5K6O1u5/GZmwJFPTp2x"
+  },
   "version" : {
-    "major" : 1,
-    "minor" : 2
+    "major" : 2,
+    "minor" : 0
   }
 }

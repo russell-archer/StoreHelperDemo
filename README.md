@@ -1,6 +1,6 @@
 #  StoreHelperDemo
 
-Implementing and testing in-App purchases with `StoreKit2` and `StoreHelper` in **Xcode 14** with **SwiftUI**, **Swift 5.7**, **iOS 16** and **macOS 13**.
+Implementing and testing in-App purchases with `StoreKit2` and `StoreHelper` in **Xcode 14/13** with **SwiftUI**, **Swift 5.7**, **iOS 16/15** and **macOS 13/12**.
 
 ---
 
@@ -10,8 +10,8 @@ Implementing and testing in-App purchases with `StoreKit2` and `StoreHelper` in 
 - See [StoreHelper](https://github.com/russell-archer/StoreHelper) for an overview of the `StoreHelper` package
 - See [StoreHelper Guide](https://github.com/russell-archer/StoreHelper/blob/main/Documentation/guide.md) for in-depth discussion and tutorial on using `StoreHelper`, `StoreKit2` with **Xcode 14**, **iOS 16** and **macOS 13**
 
-This document describes how to create an example app that demonstrates how to support in-app purchases with **SwiftUI**, `StoreHelper`, `StoreKit2`, **Xcode 14** with **SwiftUI**, **Swift 5.7**, **iOS 16** and **macOS 13**.
-Note that **Xcode 13**, **iOS 15** and **macOS 12** are also supported.
+This document describes how to create an example app that demonstrates how to support in-app purchases with **SwiftUI**, `StoreHelper`, 
+`StoreKit2`, **Xcode 14/13** with **SwiftUI**, **Swift 5.7**, **iOS 16/15** and **macOS 13/12**.
 
 - See [StoreHelper](https://github.com/russell-archer/StoreHelper) for full details of the `StoreHelper` package
 - See [In-App Purchases with Xcode 12 and iOS 14](https://github.com/russell-archer/IAPDemo) for details of working with StoreKit1 in **iOS 14**
@@ -81,7 +81,7 @@ struct StoreHelperDemoApp: App {
         WindowGroup {
             MainView()
                 .environmentObject(storeHelper)
-                .onAppear { storeHelper.start() }  // Start listening for transactions, get localized product info
+                .task { storeHelper.start() }  // Start listening for transactions, get localized product info
                 #if os(macOS)
                 .frame(minWidth: 700, idealWidth: 700, minHeight: 700, idealHeight: 700)
                 .font(.title2)

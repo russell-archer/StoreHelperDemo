@@ -60,8 +60,8 @@ struct SubscriptionRow: View {
     }
     
     private func subscribed(to productId: ProductId) async -> Bool {
-        let productPurchased = try? await storeHelper.isPurchased(productId: productId)
-        return productPurchased ?? false
+        let currentlySubscribed = try? await storeHelper.isSubscribed(productId: productId)
+        return currentlySubscribed ?? false
     }
     
     private func getSubscriptionInfo() async -> SubscriptionInfo? {
