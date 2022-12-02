@@ -5,7 +5,6 @@ Implementing and testing in-App purchases with `StoreKit2` and `StoreHelper` in 
 ---
 
 # Description
-![](./readme-assets/StoreHelperDemo0c.png)
 
 - See [StoreHelper](https://github.com/russell-archer/StoreHelper) for an overview of the `StoreHelper` package
 - See [StoreHelper Guide](https://github.com/russell-archer/StoreHelper/blob/main/Documentation/guide.md) for in-depth discussion and tutorial on using `StoreHelper`, `StoreKit2` with **Xcode 14**, **iOS 16** and **macOS 13**
