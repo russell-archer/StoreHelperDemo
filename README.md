@@ -15,7 +15,24 @@ Implementing and testing in-app purchases with `StoreKit2` and `StoreHelper` in 
 This document describes how to create an example app that demonstrates how to support in-app purchases with **SwiftUI**, `StoreHelper`, 
 `StoreKit2`, **Xcode 14/13** with **SwiftUI**, **Swift 5.7**, **iOS 16/15** and **macOS 13/12**.
 
-If you need to support iOS 14 and lower, see [In-App Purchases with Xcode 12 and iOS 14](https://github.com/russell-archer/IAPDemo) for details of working with StoreKit1 in **iOS 14**.
+# Contents
+
+- [Description](#Description)
+- [Contents](#Contents)
+- [Quick Start](#Quick-Start)
+	- [Use StoreHelper to support in-app purchases](#Use-StoreHelper-to-support-in-app-purchases)
+	- [What you'll need](#What-you'll-need)
+	- [Steps](#Steps)
+		- [Getting the StoreHelper Package](#Getting-the-StoreHelper-Package)
+		- [Create the App struct](#Create-the-App-struct)
+		- [Create MainView](#Create-MainView)
+		- [Create ProductView](#Create-ProductView)
+		- [Modify ContentView](#Modify-ContentView)
+		- [Create the ProductInfo View](#Create-the-ProductInfo-View)
+		- [Create SimplePurchaseView](#Create-SimplePurchaseView)
+		- [Add Product Images](#Add-Product-Images)
+		- [Add Product Configuration Files](#Add-Product-Configuration-Files)
+		- [Run the App](#Run-the-App)
 
 ---
 
@@ -24,7 +41,7 @@ The following steps show to use `StoreHelper` to create a bare-bones SwiftUI dem
 **iOS 15** and **macOS 12** are also supported.
 
 ## What you'll need
-- **Xcode 14** or **Xcode 13** installed on your Mac
+- **Xcode 14** installed on your Mac
 - Basic familiarity with **Xcode**, **Swift** and **SwiftUI**
 - About 15-minutes!
 
@@ -53,36 +70,44 @@ The following steps show to use `StoreHelper` to create a bare-bones SwiftUI dem
 
 ![](./readme-assets/StoreHelperDemo104.png)
 
-- Select the project's **iOS target**. Notice that `StoreHelper` has been added as a library:
+- Select the project's **target**. Notice that `StoreHelper` has been added as a library for the **iOS**, iPad **and** **macOS** targets:
 
-![](./readme-assets/StoreHelperDemo105.png)
+![](./readme-assets/StoreHelperDemo109.png)
 
-- Now select the **macOS target**. You'll see that `StoreHelper` has **not** been added as a library
-- Click the **+** to add a library, then select **StoreHelper Package > StoreHelper** and click **Add**:
+- With the project's target selected, add the **In-App Purchase** capability:
 
-![](./readme-assets/StoreHelperDemo106.png)
+![](./assets/StoreHelperDemo105.png)
+
+- Adding the in-app purchase capability will automatically add the `StoreKit` framework to your project:
+
+![](./readme-assets/StoreHelperDemo110.png)
 
 ## Create the App struct
 - Open `StoreHelperExampleApp.swift` and replace the existing code with the following:
 
 > Alternatively, you can copy everything required for the **StoreHelperDemo** app from the **StoreHelper > Samples** folder:
-> - Copy all files in **StoreHelper > Samples > Code** into your project's **Shared** folder
-> - Copy all files in **StoreHelper > Samples > Configuration** into your project's **Shared** folder
-> - Add all the images in **StoreHelper > Samples > Images** to your project's **Asset Catalog** folder
+> - Delete **ContentView.swift** and **Your-Project-NameApp.swift** from your project and move them to the trash
+> - Select any file in the **StoreHelper > Samples > Code** folder in Xcode, right-click it and select **Show in Finder**
+> - In Finder, select all the files in the **Code** directory and drag them into into your project's main folder in Xcode. Select **Copy items if needed** when prompted
+> - Rename **StoreHelperDemoApp.swift** to **Your-Project-NameApp.swift**, also rename the struct from `StoreHelperDemoApp` to `Your-Project-NameApp`
+> - In Finder, select all files (except the readme.md) in the **Configuration** directory and drag them into your project's main folder in Xcode. Select **Copy items if needed** when prompted
+> - Rename **SampleProducts.plist** to **Products.plist** and **SampleProducts.storekit** to **Products.storekit**
+> - In Finder, select all images in the **Images** directory and drag them into your project's **Asset Catalog** in Xcode
 
 ```swift
 import SwiftUI
 import StoreHelper
 
+@available(iOS 15.0, macOS 12.0, *)
 @main
 struct StoreHelperDemoApp: App {
     @StateObject var storeHelper = StoreHelper()
-
+    
     var body: some Scene {
         WindowGroup {
             MainView()
                 .environmentObject(storeHelper)
-                .task { storeHelper.start() }  // Start listening for transactions, get localized product info
+                .task { storeHelper.start() }  // Start listening for transactions
                 #if os(macOS)
                 .frame(minWidth: 700, idealWidth: 700, minHeight: 700, idealHeight: 700)
                 .font(.title2)
@@ -93,7 +118,7 @@ struct StoreHelperDemoApp: App {
 ```
 
 - Notice how we `import StoreHelper`, create an instance of the `StoreHelper` class and add it to the SwiftUI view hierarchy using the `.environment()` modifier 
-- We also call `StoreHelper.start()` to start listening for transactions and get localized product info
+- We also call `storeHelper.start()` to begin listening for App Store transactions. This should be done as soon as possible during app start-up
 
 ## Create MainView
 - Create a new SwiftUI `View` in the **Shared** folder named `MainView` and replace the existing code with the following:
@@ -101,6 +126,7 @@ struct StoreHelperDemoApp: App {
 ```swift
 import SwiftUI
 
+@available(iOS 15.0, macOS 12.0, *)
 struct MainView: View {
     let largeFlowersId = "com.rarcher.nonconsumable.flowers.large"
     let smallFlowersId = "com.rarcher.nonconsumable.flowers.small"
@@ -111,6 +137,8 @@ struct MainView: View {
                 NavigationLink(destination: ContentView()) { Text("Product List").font(.largeTitle).padding()}
                 NavigationLink(destination: ProductView(productId: largeFlowersId)) { Text("Large Flowers").font(.largeTitle).padding()}
                 NavigationLink(destination: ProductView(productId: smallFlowersId)) { Text("Small Flowers").font(.largeTitle).padding()}
+                NavigationLink(destination: SubscriptionView()) { Text("Subscriptions").font(.largeTitle).padding()}
+                NavigationLink(destination: SimplePurchaseView()) { Text("Simple Purchase").font(.largeTitle).padding()}
             }
         }
         #if os(iOS)
@@ -131,6 +159,7 @@ struct MainView: View {
 import SwiftUI
 import StoreHelper
 
+@available(iOS 15.0, macOS 12.0, *)
 struct ProductView: View {
     @EnvironmentObject var storeHelper: StoreHelper
     @State private var isPurchased = false
@@ -164,6 +193,7 @@ struct ProductView: View {
 import SwiftUI
 import StoreHelper
 
+@available(iOS 15.0, macOS 12.0, *)
 struct ContentView: View {
     @State private var showProductInfoSheet = false
     @State private var productId: ProductId = ""
@@ -200,6 +230,7 @@ import SwiftUI
 import StoreHelper
 import StoreKit
 
+@available(iOS 15.0, macOS 12.0, *)
 struct ProductInfo: View {
     @EnvironmentObject var storeHelper: StoreHelper
     @State private var product: Product?
@@ -208,17 +239,10 @@ struct ProductInfo: View {
     
     var body: some View {
         VStack {
-            HStack {
-                Spacer()
-                Image(systemName: "xmark.circle")
-                    .foregroundColor(.secondary)
-                    .padding(EdgeInsets(top: 10, leading: 10, bottom: 0, trailing: 10))
-            }
-            .onTapGesture { withAnimation { showProductInfoSheet = false }}
+            SheetBarView(showSheet: $showProductInfoSheet, title: product?.displayName ?? "Product Info")
             ScrollView {
                 VStack {
                     if let p = product {
-                        Text(p.displayName).font(.largeTitle).foregroundColor(.blue)
                         Image(p.id)
                             .resizable()
                             .frame(maxWidth: 200, maxHeight: 200)
@@ -242,6 +266,7 @@ struct ProductInfo: View {
     }
 }
 
+@available(iOS 15.0, macOS 12.0, *)
 struct ProductInfoFlowersLarge: View {
     @ViewBuilder var body: some View {
         Text("This is a information about the **Large Flowers** product.").font(.title2).padding().multilineTextAlignment(.center)
@@ -249,6 +274,7 @@ struct ProductInfoFlowersLarge: View {
     }
 }
 
+@available(iOS 15.0, macOS 12.0, *)
 struct ProductInfoFlowersSmall: View {
     @ViewBuilder var body: some View {
         Text("This is a information about the **Small Flowers** product.").font(.title2).padding().multilineTextAlignment(.center)
@@ -256,6 +282,7 @@ struct ProductInfoFlowersSmall: View {
     }
 }
 
+@available(iOS 15.0, macOS 12.0, *)
 struct ProductInfoDefault: View {
     @ViewBuilder var body: some View {
         Text("This is generic information about a product.").font(.title2).padding().multilineTextAlignment(.center)
@@ -266,16 +293,61 @@ struct ProductInfoDefault: View {
 
 - `ProductInfo` uses `StoreHelper.product(from:)` to retrieve a `StoreKit2 Product` struct, which gives localized information about the product
 
+## Create SimplePurchaseView
+- Create a new SwiftUI view in the **Shared** folder named `SimplePurchaseView.swift`. Replace the existing code with the following:
+
+```swift
+import SwiftUI
+import StoreKit
+import StoreHelper
+
+struct SimplePurchaseView: View {
+    @EnvironmentObject var storeHelper: StoreHelper
+    @State var purchaseState: PurchaseState = .unknown
+    var price = "1.99"
+    let productId = "com.rarcher.nonconsumable.flowers.large"
+    
+    var body: some View {
+        VStack {
+            Text("This view shows how to create a minimal purchase page for a product. The product shown is **Large Flowers**").multilineTextAlignment(.center)
+            Image(productId)
+                .resizable()
+                .frame(maxWidth: 250, maxHeight: 250)
+                .aspectRatio(contentMode: .fit)
+                .cornerRadius(25)
+            
+            PurchaseButton(purchaseState: $purchaseState, productId: productId, price: price).padding()
+            
+            if purchaseState == .purchased {
+                Text("This product has already been purchased").multilineTextAlignment(.center)
+            } else {
+                Text("This product is available for purchase").multilineTextAlignment(.center)
+            }
+            
+            Spacer()
+        }
+        .padding()
+        .task {
+            let purchased = (try? await storeHelper.isPurchased(productId: productId)) ?? false
+            purchaseState = purchased ? .purchased : .unknown
+        }
+    }
+}
+```
+
 ## Add Product Images
-- From the **StoreHelper > Samples > Images** folder, drag all the images into the project's **Asset Catalog**. These images have filenames that are the same as the product ids for the products which they represent
+- Select any file in the **StoreHelper > Samples > Images** folder in Xcode, right-click it and select **Show in Finder**
+- In Finder, select all images in the **Images** directory and drag them into your project's **Asset Catalog** in Xcode
+- These images have filenames that are the same as the product ids for the products which they represent
 
 ## Add Product Configuration Files
-- From the **StoreHelper > Samples > Configuration** folder, drag the `Products.storekit` and `Products.plist` files into the **Shared** project folder. These are example product configuration files
-- Select the **iOS target** and select **Product > Scheme> Edit Scheme**. Select the `Products.storekit` file in the **StoreKit Configuration** field:
+- Select any file in the **StoreHelper > Samples > Configuration** folder in Xcode, right-click it and select **Show in Finder**
+- In Finder, select all files (except readme.md) in the **Configuration** directory and drag them into your project's main folder in Xcode. Select **Copy items if needed** when prompted
+- Rename **SampleProducts.plist** to **Products.plist** and **SampleProducts.storekit** to **Products.storekit**
+- Select your project's **target** and then select **Product > Scheme> Edit Scheme**
+- Select the `Products.storekit` file in the **StoreKit Configuration** field:
 
 ![](./readme-assets/StoreHelperDemo107.png)
-
-- Repeat the previous step for the **macOS target**
 
 ## Run the App
 - Select the **iOS target** and run it in the simulator:
@@ -287,12 +359,3 @@ struct ProductInfoDefault: View {
 
 ![](./readme-assets/StoreHelperDemo108.png)
 
-- Now select the **macOS target** and run it on your Mac:
-
-![](./readme-assets/StoreHelperDemo108b.png)
-
-![](./readme-assets/StoreHelperDemo108c.png)
-
----
-
-### See [StoreHelper](https://github.com/russell-archer/StoreHelper) for full details of the `StoreHelper` package
