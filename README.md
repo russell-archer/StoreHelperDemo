@@ -11,6 +11,7 @@ Implementing and testing in-app purchases with `StoreKit2` and `StoreHelper` in 
 - See [StoreHelper](https://github.com/russell-archer/StoreHelper) for an overview of the `StoreHelper` package
 - See [Quick Start](https://github.com/russell-archer/StoreHelper/blob/main/Documentation/quickstart.md) - `StoreHelper` quick-start guide 
 - See [StoreHelper Guide](https://github.com/russell-archer/StoreHelper/blob/main/Documentation/guide.md) for in-depth discussion and tutorial on using `StoreHelper`, `StoreKit2` with **Xcode 14**, **iOS 16** and **macOS 13**
+- See [StoreHelper Demo with UIKit](https://github.com/russell-archer/StoreHelperDemoUIKit) for an experimental demo project showing how to use `StoreHelper` in a UIKit project
 
 This document describes how to create an example app that demonstrates how to support in-app purchases with **SwiftUI**, `StoreHelper`, 
 `StoreKit2`, **Xcode 14/13** with **SwiftUI**, **Swift 5.7**, **iOS 16/15** and **macOS 13/12**.
@@ -199,20 +200,18 @@ struct ContentView: View {
     @State private var productId: ProductId = ""
     
     var body: some View {
-        ScrollView {
-            Products() { id in
-                productId = id
-                showProductInfoSheet = true
+        Products() { id in
+            productId = id
+            showProductInfoSheet = true
+        }
+        .sheet(isPresented: $showProductInfoSheet) {
+            VStack {
+                // Pull in text and images that explain the particular product identified by `productId`
+                ProductInfo(productInfoProductId: $productId, showProductInfoSheet: $showProductInfoSheet)
             }
-            .sheet(isPresented: $showProductInfoSheet) {
-                VStack {
-                    // Pull in text and images that explain the particular product identified by `productId`
-                    ProductInfo(productInfoProductId: $productId, showProductInfoSheet: $showProductInfoSheet)
-                }
-                #if os(macOS)
-                .frame(minWidth: 500, idealWidth: 500, maxWidth: 500, minHeight: 500, idealHeight: 500, maxHeight: 500)
-                #endif
-            }
+            #if os(macOS)
+            .frame(minWidth: 500, idealWidth: 500, maxWidth: 500, minHeight: 500, idealHeight: 500, maxHeight: 500)
+            #endif
         }
     }
 }
