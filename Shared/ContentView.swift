@@ -17,7 +17,6 @@ import StoreHelper
 ///
 @available(iOS 15.0, macOS 12.0, *)
 struct ContentView: View {
-    @EnvironmentObject var storeHelper: StoreHelper
     @State private var showProductInfoSheet = false
     @State private var productId: ProductId = ""
     
