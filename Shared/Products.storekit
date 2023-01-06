@@ -93,12 +93,11 @@
   "settings" : {
     "_askToBuyEnabled" : false,
     "_billingIssuesEnabled" : false,
-    "_compatibilityTimeRate" : 6,
     "_failTransactionsEnabled" : false,
     "_locale" : "en_US",
     "_storefront" : "USA",
     "_storeKitError" : 0,
-    "_timeRate" : 15
+    "_timeRate" : 0
   },
   "subscriptionGroups" : [
     {
@@ -130,9 +129,9 @@
           "codeOffers" : [
             {
               "eligibility" : [
+                "new",
                 "expired",
-                "existing",
-                "new"
+                "existing"
               ],
               "internalID" : "7638AFBA",
               "isStackable" : true,
