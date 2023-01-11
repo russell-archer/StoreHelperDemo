@@ -5,7 +5,7 @@
     <key>appGroupBundleId</key>
     <string></string>
     <key>contactUsUrl</key>
-    <string></string>
+    <string>https://reportaproblem.apple.com/</string>
     <key>requestRefundUrl</key>
     <string>https://reportaproblem.apple.com/</string>
     <key>restorePurchasesButtonText</key>
@@ -16,5 +16,7 @@
     <string>https://russell-archer.github.io/privacy/</string>
     <key>redeemOfferCodeButtonText</key>
     <string>Redeem Offer Code</string>
+    <key>refreshProductsButtonText</key>
+    <string>Refresh Products</string>
 </dict>
 </plist>
