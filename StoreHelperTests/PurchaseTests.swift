@@ -40,7 +40,7 @@ final class StoreHelperTests: XCTestCase {
         session = nil
     }
     
-    @MainActor func testPurchase() async throws {
+    func testPurchase() async throws {
         XCTAssert(sut.hasStarted)
         XCTAssert(sut.hasProducts)
         
@@ -62,4 +62,3 @@ final class StoreHelperTests: XCTestCase {
         XCTAssert(result.purchaseState == .purchased)
     }
 }
-

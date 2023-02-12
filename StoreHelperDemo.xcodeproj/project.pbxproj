@@ -30,7 +30,9 @@
 		68B56A5A286DE20F0093F3EE /* StoreHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 68B56A59286DE20F0093F3EE /* StoreHelper */; };
 		68B62999290060B0000843FA /* SimplePurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B62998290060B0000843FA /* SimplePurchaseView.swift */; };
 		68B6299A290060B0000843FA /* SimplePurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B62998290060B0000843FA /* SimplePurchaseView.swift */; };
-		68DB9C58298D282700E3CE23 /* StoreHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DB9C57298D282700E3CE23 /* StoreHelperTests.swift */; };
+		68D231A029994CA0009F367D /* ProductConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D2319D29994CA0009F367D /* ProductConfigurationTests.swift */; };
+		68D231A129994CA0009F367D /* PurchaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D2319E29994CA0009F367D /* PurchaseTests.swift */; };
+		68D231A229994CA0009F367D /* SubscriptionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D2319F29994CA0009F367D /* SubscriptionTests.swift */; };
 		68DB9C5F298D296400E3CE23 /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 68DB9C5E298D296400E3CE23 /* Configuration.plist */; };
 		68DB9C60298D296400E3CE23 /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 68DB9C5E298D296400E3CE23 /* Configuration.plist */; };
 		68E622AC27EFB88200836E6F /* SubscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E622AB27EFB88200836E6F /* SubscriptionView.swift */; };
@@ -73,8 +75,10 @@
 		6885967D27A0321C00251729 /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
 		6890B16F2813086F00119657 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS15.4.sdk/System/Library/Frameworks/StoreKit.framework; sourceTree = DEVELOPER_DIR; };
 		68B62998290060B0000843FA /* SimplePurchaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplePurchaseView.swift; sourceTree = "<group>"; };
+		68D2319D29994CA0009F367D /* ProductConfigurationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductConfigurationTests.swift; sourceTree = "<group>"; };
+		68D2319E29994CA0009F367D /* PurchaseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseTests.swift; sourceTree = "<group>"; };
+		68D2319F29994CA0009F367D /* SubscriptionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscriptionTests.swift; sourceTree = "<group>"; };
 		68DB9C55298D282700E3CE23 /* StoreHelperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoreHelperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		68DB9C57298D282700E3CE23 /* StoreHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreHelperTests.swift; sourceTree = "<group>"; };
 		68DB9C5E298D296400E3CE23 /* Configuration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Configuration.plist; sourceTree = "<group>"; };
 		68E622AB27EFB88200836E6F /* SubscriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -187,7 +191,9 @@
 		68DB9C56298D282700E3CE23 /* StoreHelperTests */ = {
 			isa = PBXGroup;
 			children = (
-				68DB9C57298D282700E3CE23 /* StoreHelperTests.swift */,
+				68D2319D29994CA0009F367D /* ProductConfigurationTests.swift */,
+				68D2319E29994CA0009F367D /* PurchaseTests.swift */,
+				68D2319F29994CA0009F367D /* SubscriptionTests.swift */,
 			);
 			path = StoreHelperTests;
 			sourceTree = "<group>";
@@ -272,6 +278,7 @@
 					};
 					68DB9C54298D282700E3CE23 = {
 						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
 						TestTargetID = 686DA128279F6C3700576175;
 					};
 				};
@@ -364,7 +371,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68DB9C58298D282700E3CE23 /* StoreHelperTests.swift in Sources */,
+				68D231A129994CA0009F367D /* PurchaseTests.swift in Sources */,
+				68D231A229994CA0009F367D /* SubscriptionTests.swift in Sources */,
+				68D231A029994CA0009F367D /* ProductConfigurationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -626,16 +635,26 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = R6BE99W3FU;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.rarcher.StoreHelperTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StoreHelperDemo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/StoreHelperDemo";
@@ -647,15 +666,24 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = R6BE99W3FU;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.rarcher.StoreHelperTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
