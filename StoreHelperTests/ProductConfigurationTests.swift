@@ -9,6 +9,7 @@ import XCTest
 @testable import StoreHelper
 
 final class ProductConfigurationTests: XCTestCase {
+    let storeConfiguration = StoreConfiguration()
     
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -27,7 +28,7 @@ final class ProductConfigurationTests: XCTestCase {
     }
     
     func testReadConfiguredSubscriptionGroups() {
-        let subscriptionGroupInfo = StoreConfiguration.readConfiguredSubscriptionGroups()
+        let subscriptionGroupInfo = storeConfiguration.readConfiguredSubscriptionGroups()
         XCTAssertNotNil(subscriptionGroupInfo)
         
         if let subscriptionGroupInfo {

@@ -71,27 +71,29 @@ final class SubscriptionTests: XCTestCase {
     }
     
     func testGroupName() {
-        var group = SubscriptionHelper.groupName(from: "com.rarcher.subscription.vip.gold")
+        let subscriptionHelper = SubscriptionHelper(storeHelper: sut)
+        
+        var group = subscriptionHelper.groupName(from: "com.rarcher.subscription.vip.gold")
         XCTAssertNotNil(group)
         XCTAssert(group == "vip")
         
-        group = SubscriptionHelper.groupName(from: "com.rarcher.subscription.vip.silver")
+        group = subscriptionHelper.groupName(from: "com.rarcher.subscription.vip.silver")
         XCTAssertNotNil(group)
         XCTAssert(group == "vip")
 
-        group = SubscriptionHelper.groupName(from: "com.rarcher.subscription.vip.bronze")
+        group = subscriptionHelper.groupName(from: "com.rarcher.subscription.vip.bronze")
         XCTAssertNotNil(group)
         XCTAssert(group == "vip")
 
-        group = SubscriptionHelper.groupName(from: "com.rarcher.green")
+        group = subscriptionHelper.groupName(from: "com.rarcher.green")
         XCTAssertNotNil(group)
         XCTAssert(group == "standard")
 
-        group = SubscriptionHelper.groupName(from: "com.rarcher.amber")
+        group = subscriptionHelper.groupName(from: "com.rarcher.amber")
         XCTAssertNotNil(group)
         XCTAssert(group == "standard")
 
-        group = SubscriptionHelper.groupName(from: "com.rarcher.red")
+        group = subscriptionHelper.groupName(from: "com.rarcher.red")
         XCTAssertNotNil(group)
         XCTAssert(group == "standard")
     }
