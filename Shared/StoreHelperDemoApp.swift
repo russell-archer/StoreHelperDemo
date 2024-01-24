@@ -17,7 +17,10 @@ struct StoreHelperDemoApp: App {
         WindowGroup {
             MainView()
                 .environmentObject(storeHelper)
-                .task { storeHelper.start() }  // Start listening for transactions
+                .task {
+                    storeHelper.start()  // Start listening for transactions
+                    StoreLog.logIsPurchasedEvents = false  // Set to true for verbose logging
+                }
                 #if os(macOS)
                 .frame(minWidth: 700, idealWidth: 700, minHeight: 700, idealHeight: 700)
                 .font(.title2)
