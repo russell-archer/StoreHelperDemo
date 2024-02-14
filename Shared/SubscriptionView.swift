@@ -33,7 +33,7 @@ struct SubscriptionView: View {
         }
         .padding()
         .onAppear { productIds = storeHelper.subscriptionProductIds }
-        .onChange(of: storeHelper.products) { _ in
+        .onChange(of: storeHelper.products) {
             productIds = storeHelper.subscriptionProductIds
         }
     }

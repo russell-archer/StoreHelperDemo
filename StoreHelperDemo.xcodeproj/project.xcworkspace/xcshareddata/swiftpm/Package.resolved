@@ -6,7 +6,7 @@
       "location" : "https://github.com/russell-archer/StoreHelper.git",
       "state" : {
         "branch" : "main",
-        "revision" : "5ba7ebb994f9b7f405beb5e191e79da966200bfb"
+        "revision" : "a7462f1dcc8e5c8e89d3c14452d18132e57c4931"
       }
     },
     {
@@ -14,8 +14,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-collections",
       "state" : {
-        "revision" : "937e904258d22af6e447a0b72c0bc67583ef64a2",
-        "version" : "1.0.4"
+        "revision" : "94cf62b3ba8d4bed62680a282d4c25f9c63c2efb",
+        "version" : "1.1.0"
       }
     }
   ],

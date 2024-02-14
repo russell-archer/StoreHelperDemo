@@ -45,7 +45,7 @@ struct ProductView: View {
             let isPurchased = (try? await storeHelper.isPurchased(productId: productId)) ?? false
             purchaseState = isPurchased ? .purchased : .notPurchased
         }
-        .onChange(of: storeHelper.purchasedProducts) { _ in
+        .onChange(of: storeHelper.purchasedProducts) {
             Task.init {
                 let isPurchased = (try? await storeHelper.isPurchased(productId: productId)) ?? false
                 purchaseState = isPurchased ? .purchased : .notPurchased

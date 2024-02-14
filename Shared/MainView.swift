@@ -13,13 +13,15 @@ struct MainView: View {
     let smallFlowersId = "com.rarcher.nonconsumable.flowers.small"
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             List {
-                NavigationLink(destination: ContentView()) { Text("Product List").font(.largeTitle).padding()}
-                NavigationLink(destination: ProductView(productId: largeFlowersId)) { Text("Large Flowers").font(.largeTitle).padding()}
-                NavigationLink(destination: ProductView(productId: smallFlowersId)) { Text("Small Flowers").font(.largeTitle).padding()}
-                NavigationLink(destination: SubscriptionView()) { Text("Subscriptions").font(.largeTitle).padding()}
-                NavigationLink(destination: SimplePurchaseView()) { Text("Simple Purchase").font(.largeTitle).padding()}
+                NavigationLink(destination: ContentView()) { Text("Product List").font(.title2).padding()}
+                NavigationLink(destination: ProductView(productId: largeFlowersId)) { Text("Large Flowers").font(.title2).padding()}
+                NavigationLink(destination: ProductView(productId: smallFlowersId)) { Text("Small Flowers").font(.title2).padding()}
+                NavigationLink(destination: SubscriptionView()) { Text("Subscriptions").font(.title2).padding()}
+                NavigationLink(destination: SimplePurchaseView()) { Text("Simple Purchase").font(.title2).padding()}
+                NavigationLink(destination: StoreKitStoreView()) { Text("StoreKit:\nStoreView").font(.title2).padding()}
+                NavigationLink(destination: StoreKitSubscriptionStoreView()) { Text("StoreKit:\nSubscriptionStoreView").font(.title2).padding()}
             }
         }
         #if os(iOS)

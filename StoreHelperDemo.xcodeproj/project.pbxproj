@@ -33,6 +33,12 @@
 		68D231A029994CA0009F367D /* ProductConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D2319D29994CA0009F367D /* ProductConfigurationTests.swift */; };
 		68D231A129994CA0009F367D /* PurchaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D2319E29994CA0009F367D /* PurchaseTests.swift */; };
 		68D231A229994CA0009F367D /* SubscriptionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D2319F29994CA0009F367D /* SubscriptionTests.swift */; };
+		68D629D42B7CF7800067ED79 /* StoreKitProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D629D12B7CF7800067ED79 /* StoreKitProductView.swift */; };
+		68D629D52B7CF7800067ED79 /* StoreKitProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D629D12B7CF7800067ED79 /* StoreKitProductView.swift */; };
+		68D629D62B7CF7800067ED79 /* StoreKitStoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D629D22B7CF7800067ED79 /* StoreKitStoreView.swift */; };
+		68D629D72B7CF7800067ED79 /* StoreKitStoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D629D22B7CF7800067ED79 /* StoreKitStoreView.swift */; };
+		68D629D82B7CF7800067ED79 /* StoreKitSubscriptionStoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D629D32B7CF7800067ED79 /* StoreKitSubscriptionStoreView.swift */; };
+		68D629D92B7CF7800067ED79 /* StoreKitSubscriptionStoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D629D32B7CF7800067ED79 /* StoreKitSubscriptionStoreView.swift */; };
 		68DB9C5F298D296400E3CE23 /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 68DB9C5E298D296400E3CE23 /* Configuration.plist */; };
 		68DB9C60298D296400E3CE23 /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 68DB9C5E298D296400E3CE23 /* Configuration.plist */; };
 		68E622AC27EFB88200836E6F /* SubscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E622AB27EFB88200836E6F /* SubscriptionView.swift */; };
@@ -78,6 +84,9 @@
 		68D2319D29994CA0009F367D /* ProductConfigurationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductConfigurationTests.swift; sourceTree = "<group>"; };
 		68D2319E29994CA0009F367D /* PurchaseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseTests.swift; sourceTree = "<group>"; };
 		68D2319F29994CA0009F367D /* SubscriptionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscriptionTests.swift; sourceTree = "<group>"; };
+		68D629D12B7CF7800067ED79 /* StoreKitProductView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreKitProductView.swift; sourceTree = "<group>"; };
+		68D629D22B7CF7800067ED79 /* StoreKitStoreView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreKitStoreView.swift; sourceTree = "<group>"; };
+		68D629D32B7CF7800067ED79 /* StoreKitSubscriptionStoreView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreKitSubscriptionStoreView.swift; sourceTree = "<group>"; };
 		68DB9C55298D282700E3CE23 /* StoreHelperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoreHelperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		68DB9C5E298D296400E3CE23 /* Configuration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Configuration.plist; sourceTree = "<group>"; };
 		68E622AB27EFB88200836E6F /* SubscriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionView.swift; sourceTree = "<group>"; };
@@ -139,6 +148,9 @@
 				6885967D27A0321C00251729 /* ProductView.swift */,
 				68B62998290060B0000843FA /* SimplePurchaseView.swift */,
 				686DA122279F6C3600576175 /* StoreHelperDemoApp.swift */,
+				68D629D12B7CF7800067ED79 /* StoreKitProductView.swift */,
+				68D629D22B7CF7800067ED79 /* StoreKitStoreView.swift */,
+				68D629D32B7CF7800067ED79 /* StoreKitSubscriptionStoreView.swift */,
 				68E622AB27EFB88200836E6F /* SubscriptionView.swift */,
 				686DA124279F6C3700576175 /* Assets.xcassets */,
 			);
@@ -268,7 +280,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1420;
-				LastUpgradeCheck = 1400;
+				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					686DA128279F6C3700576175 = {
 						CreatedOnToolsVersion = 13.2;
@@ -343,11 +355,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68D629D62B7CF7800067ED79 /* StoreKitStoreView.swift in Sources */,
 				686DA151279F6F7900576175 /* ProductInfo.swift in Sources */,
+				68D629D82B7CF7800067ED79 /* StoreKitSubscriptionStoreView.swift in Sources */,
 				6885967B27A02F9600251729 /* MainView.swift in Sources */,
 				6885967E27A0321C00251729 /* ProductView.swift in Sources */,
 				686DA134279F6C3700576175 /* ContentView.swift in Sources */,
 				686DA132279F6C3700576175 /* StoreHelperDemoApp.swift in Sources */,
+				68D629D42B7CF7800067ED79 /* StoreKitProductView.swift in Sources */,
 				68E622AC27EFB88200836E6F /* SubscriptionView.swift in Sources */,
 				68B62999290060B0000843FA /* SimplePurchaseView.swift in Sources */,
 			);
@@ -357,11 +372,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68D629D72B7CF7800067ED79 /* StoreKitStoreView.swift in Sources */,
 				686DA152279F6F7900576175 /* ProductInfo.swift in Sources */,
+				68D629D92B7CF7800067ED79 /* StoreKitSubscriptionStoreView.swift in Sources */,
 				6885967C27A02F9600251729 /* MainView.swift in Sources */,
 				6885967F27A0321C00251729 /* ProductView.swift in Sources */,
 				686DA135279F6C3700576175 /* ContentView.swift in Sources */,
 				686DA133279F6C3700576175 /* StoreHelperDemoApp.swift in Sources */,
+				68D629D52B7CF7800067ED79 /* StoreKitProductView.swift in Sources */,
 				68E622AD27EFB88200836E6F /* SubscriptionView.swift in Sources */,
 				68B6299A290060B0000843FA /* SimplePurchaseView.swift in Sources */,
 			);
@@ -426,6 +444,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -486,6 +505,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -517,7 +537,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -551,7 +571,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -590,7 +610,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.rarcher.StoreHelperDemo;
 				PRODUCT_NAME = StoreHelperDemo;
@@ -620,7 +640,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.rarcher.StoreHelperDemo;
 				PRODUCT_NAME = StoreHelperDemo;
