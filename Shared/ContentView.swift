@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import StoreKit
 import StoreHelper
 
 /// `ContentView` displays the `Products` view, which is responsible for displaying a list of available products, along with

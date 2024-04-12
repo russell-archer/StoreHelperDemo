@@ -1,4 +1,5 @@
 {
+  "originHash" : "d49edc9b477599dd16e7173c0113f0852f946233bba237b0da4d1190530d82ee",
   "pins" : [
     {
       "identity" : "storehelper",
@@ -6,7 +7,7 @@
       "location" : "https://github.com/russell-archer/StoreHelper.git",
       "state" : {
         "branch" : "main",
-        "revision" : "a7462f1dcc8e5c8e89d3c14452d18132e57c4931"
+        "revision" : "0cf6c693f5a4cdf0a5c7008b9433267062fd4a82"
       }
     },
     {
@@ -19,5 +20,5 @@
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }
