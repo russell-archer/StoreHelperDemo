@@ -115,7 +115,7 @@ import StoreHelper
 @available(iOS 15.0, macOS 12.0, *)
 @main
 struct StoreHelperDemoApp: App {
-    var storeHelper = StoreHelper()
+    @StateObject var storeHelper = StoreHelper()
     
     var body: some Scene {
         WindowGroup {
