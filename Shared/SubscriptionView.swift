@@ -82,8 +82,8 @@ struct SubscriptionRow: View {
         return currentlySubscribed ?? false
     }
     
-    private func getSubscriptionInfo() async -> SubscriptionInfo? {
-        var subInfo: SubscriptionInfo?
+    private func getSubscriptionInfo() async -> SubInfo? {
+        var subInfo: SubInfo?
         
         // Get info on all subscription groups (this demo only has one group called "VIP")
         let subscriptionGroupInfo = await storeHelper.subscriptionHelper.groupSubscriptionInfo()
@@ -95,7 +95,7 @@ struct SubscriptionRow: View {
         return subInfo
     }
     
-    private func getDetailedSubscriptionInfo(for subInfo: SubscriptionInfo) async -> ExtendedSubscriptionInfo? {
+    private func getDetailedSubscriptionInfo(for subInfo: SubInfo) async -> ExtendedSubscriptionInfo? {
         let viewModel = SubscriptionInfoViewModel(storeHelper: storeHelper, subscriptionInfo: subInfo)
         return await viewModel.extendedSubscriptionInfo()
     }
