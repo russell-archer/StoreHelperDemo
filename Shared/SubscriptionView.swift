@@ -78,7 +78,7 @@ struct SubscriptionRow: View {
     }
     
     private func subscribed(to productId: ProductId) async -> Bool {
-        let currentlySubscribed = try? await storeHelper.isSubscribed(productId: productId)
+        let currentlySubscribed = try? await storeHelper.isSubscribed(productId: productId, checkSuperceded: true)
         return currentlySubscribed ?? false
     }
     
